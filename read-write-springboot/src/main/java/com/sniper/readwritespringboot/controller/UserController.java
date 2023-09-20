@@ -1,9 +1,9 @@
 package com.sniper.readwritespringboot.controller;
 
-import com.sniper.springbootreadwrite.common.Result;
-import com.sniper.springbootreadwrite.common.ResultWrap;
-import com.sniper.springbootreadwrite.entity.User;
-import com.sniper.springbootreadwrite.service.UserService;
+import com.sniper.readwritespringboot.common.Result;
+import com.sniper.readwritespringboot.common.ResultWrap;
+import com.sniper.readwritespringboot.entity.User;
+import com.sniper.readwritespringboot.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

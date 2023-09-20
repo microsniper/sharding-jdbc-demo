@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @ComponentScan(basePackages = {"com.sniper.readwritespringboot.*"})
-@MapperScan(basePackages = {"com.sniper.springbootreadwrite.mapper"})
+@MapperScan(basePackages = {"com.sniper.readwritespringboot.mapper"})
 @SpringBootApplication
 public class ReadWriteSpringBootApplication {
 

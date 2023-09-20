@@ -1,7 +1,8 @@
 package com.sniper.readwritespringboot.service;
 
-import com.sniper.springbootreadwrite.common.Result;
-import com.sniper.springbootreadwrite.entity.User;
+
+import com.sniper.readwritespringboot.common.Result;
+import com.sniper.readwritespringboot.entity.User;
 
 import java.util.List;
 

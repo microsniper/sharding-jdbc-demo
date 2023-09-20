@@ -1,6 +1,6 @@
 package com.sniper.readwritespringboot.mapper;
 
-import com.sniper.springbootreadwrite.entity.User;
+import com.sniper.readwritespringboot.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

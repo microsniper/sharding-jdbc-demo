@@ -1,10 +1,10 @@
 package com.sniper.readwritespringboot.service.impl;
 
-import com.sniper.springbootreadwrite.common.Result;
-import com.sniper.springbootreadwrite.common.ResultWrap;
-import com.sniper.springbootreadwrite.entity.User;
-import com.sniper.springbootreadwrite.mapper.UserMapper;
-import com.sniper.springbootreadwrite.service.UserService;
+import com.sniper.readwritespringboot.common.Result;
+import com.sniper.readwritespringboot.common.ResultWrap;
+import com.sniper.readwritespringboot.entity.User;
+import com.sniper.readwritespringboot.mapper.UserMapper;
+import com.sniper.readwritespringboot.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
