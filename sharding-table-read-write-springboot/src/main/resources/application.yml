@@ -1,0 +1,43 @@
+server:
+  port: 8083
+spring:
+  shardingsphere:
+    datasource:
+      names: master,slave
+      master: # 主数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/ds?characterEncoding=utf-8
+        username: root
+        password: root
+      slave:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/ds?characterEncoding=utf-8
+        username: root
+        password: root
+    sharding:  # 分表配置
+      tables:
+        order:
+          actual-data-nodes: ds.order_${0..3}
+          table-strategy:
+            inline: # inline 表达式
+              sharding-column: id
+              algorithm-expression: order_${id.intValue() % 4}
+      master-slave-rules: # 读写分离配置
+        ds:
+          master-data-source-name: master
+          slave-data-source-names: slave
+    props: # 显示SQL
+      sql:
+        show: true
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+logging:
+  level:
+    root: info
+    com.sniper.springbootreadwrite.mapper: debug
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
