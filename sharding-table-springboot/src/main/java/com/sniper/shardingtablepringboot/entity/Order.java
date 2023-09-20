@@ -14,14 +14,12 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Order {
 
     private Integer id;
 
-    private String name;
+    private String orderNo;
 
-    private Integer age;
-
-    private String address;
+    private String goodsName;
 
 }
