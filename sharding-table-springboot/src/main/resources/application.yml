@@ -15,9 +15,12 @@ spring:
         order:
           actual-data-nodes: master.order_${0..3}
           table-strategy:
-            inline:
+#            inline: # # inline 表达式
+#              sharding-column: id
+#              algorithm-expression: order_${id.intValue() % 4}
+            standard: # 自定义分表算法
               sharding-column: id
-              algorithm-expression: order_${id.intValue() % 4}
+              precise-algorithm-class-name: com.sniper.shardingtablepringboot.algorithm.MyPreciseShardingAlgorithm
     props: # 显示SQL
       sql:
         show: true
